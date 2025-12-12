@@ -297,9 +297,10 @@ export default function IntroAnimation({ onComplete }: { onComplete: () => void 
                 <Image
                   src={logos[logoIndex]}
                   alt=""
-                  width={280}
-                  height={140}
-                  className={isMobile ? "w-[120px] h-auto" : "w-[200px] h-auto md:w-[260px] lg:w-[320px]"}
+                  width={400}
+                  height={200}
+                  className={isMobile ? "w-[180px] h-auto" : "w-[200px] h-auto md:w-[260px] lg:w-[320px]"}
+                  quality={90}
                 />
               </div>
             </motion.div>

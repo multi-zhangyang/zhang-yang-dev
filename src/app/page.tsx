@@ -42,26 +42,24 @@ const desktopStickers = [
   { src: "/images/final-logos/f2.png", x: "12%", y: "70%", rotate: -8, size: 90 },
 ];
 
-// 移动端贴纸数据 - 围绕边缘分布，中间留空给 welcome 图片
+// 移动端贴纸数据 - 大尺寸，不溢出屏幕，围绕中心分布
 const mobileStickers = [
   // 顶部一排（3个）
-  { src: "/images/sucked-logos/1.png", x: "3%", y: "2%", rotate: -12, size: 36 },
-  { src: "/images/sucked-logos/2.png", x: "40%", y: "1%", rotate: 5, size: 32 },
-  { src: "/images/sucked-logos/3.png", x: "75%", y: "2%", rotate: 8, size: 34 },
-  // 左侧（3个，避开中间）
-  { src: "/images/sucked-logos/4.png", x: "1%", y: "15%", rotate: -8, size: 34 },
-  { src: "/images/sucked-logos/5.png", x: "2%", y: "72%", rotate: 10, size: 36 },
-  { src: "/images/sucked-logos/6.png", x: "1%", y: "88%", rotate: -5, size: 32 },
-  // 右侧（3个，避开中间）
-  { src: "/images/sucked-logos/7.png", x: "80%", y: "14%", rotate: 12, size: 35 },
-  { src: "/images/sucked-logos/8.png", x: "78%", y: "70%", rotate: -10, size: 34 },
-  { src: "/images/sucked-logos/9.png", x: "76%", y: "86%", rotate: 6, size: 36 },
-  // 底部一排（2个，避开 scroll down）
-  { src: "/images/sucked-logos/10.png", x: "15%", y: "90%", rotate: -6, size: 32 },
-  { src: "/images/sucked-logos/11.png", x: "62%", y: "91%", rotate: 8, size: 34 },
-  // final logos（2个，放在角落）
-  { src: "/images/final-logos/Create5-Photoroom.png", x: "2%", y: "30%", rotate: -3, size: 42 },
-  { src: "/images/final-logos/Modify.png", x: "74%", y: "32%", rotate: 5, size: 40 },
+  { src: "/images/sucked-logos/1.png", x: "2%", y: "2%", rotate: -12, size: 75 },
+  { src: "/images/sucked-logos/2.png", x: "38%", y: "1%", rotate: 5, size: 70 },
+  { src: "/images/sucked-logos/3.png", x: "72%", y: "2%", rotate: 8, size: 72 },
+  // 左侧（2个，靠近中间）
+  { src: "/images/sucked-logos/4.png", x: "3%", y: "18%", rotate: -8, size: 72 },
+  { src: "/images/sucked-logos/5.png", x: "5%", y: "70%", rotate: 10, size: 75 },
+  // 右侧（2个，靠近中间）
+  { src: "/images/sucked-logos/7.png", x: "70%", y: "16%", rotate: 12, size: 74 },
+  { src: "/images/sucked-logos/8.png", x: "68%", y: "68%", rotate: -10, size: 72 },
+  // 底部一排（2个）
+  { src: "/images/sucked-logos/10.png", x: "8%", y: "85%", rotate: -6, size: 68 },
+  { src: "/images/sucked-logos/11.png", x: "62%", y: "86%", rotate: 8, size: 70 },
+  // final logos（2个，左右两侧中间位置）
+  { src: "/images/final-logos/Create5-Photoroom.png", x: "2%", y: "42%", rotate: -3, size: 85 },
+  { src: "/images/final-logos/Modify.png", x: "65%", y: "44%", rotate: 5, size: 80 },
 ];
 
 export default function Home() {
@@ -138,10 +136,11 @@ export default function Home() {
                   <Image
                     src={sticker.src}
                     alt=""
-                    width={sticker.size}
-                    height={sticker.size}
+                    width={sticker.size * 6}
+                    height={sticker.size * 6}
                     className="w-auto h-auto"
                     style={{ width: sticker.size }}
+                    quality={95}
                   />
                 </motion.div>
               );
