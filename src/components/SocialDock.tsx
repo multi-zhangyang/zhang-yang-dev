@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Github, Mail, Coffee } from "lucide-react";
 
 const socials = [
-  { icon: Github, href: "https://github.com", color: "#333", label: "GitHub" },
+  { icon: Github, href: "https://github.com/multi-zhangyang", color: "#333", label: "GitHub" },
   { icon: Mail, href: "mailto:hi@zhangyang.dev", color: "#FF4081", label: "Email" },
   { icon: Coffee, href: "https://buymeacoffee.com", color: "#FFEB3B", label: "Coffee" },
 ];
